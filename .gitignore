@@ -65,3 +65,7 @@ hosts
 
 # VF container specific
 .VFContainerfile
+
+# Ansible collection artifacts
+
+*.tar.gz
