@@ -42,7 +42,8 @@ repos:
         additional_dependencies:
           - 'ansible-core<2.12'
         verbose: true
-        entry: ansible-lint --force-color -p -v
+        entry:
+          ansible-lint --force-color -p -v
 
   - repo: https://github.com/openstack-dev/bashate.git
     rev: 2.0.0
