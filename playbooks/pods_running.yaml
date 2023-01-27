@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  vars:
+    metadata:
+      name: Pods running
+      description: |
+        Check that pods are in running state by querying their metadata.
+      groups:
+        - pre-adoption
+      categories:
+        - pods
+      products:
+        - kubernetes
+  roles:
+    - validations.operators_validations.check_pods

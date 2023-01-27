@@ -1,0 +1,9 @@
+---
+no-op:
+  - description: >-
+      Validations which will run a no-op operation to verify that the workflow is
+      working as it supposed to, it will run in both the Undercloud and Overcloud
+      Nodes.
+pre-adoption:
+  - description: >-
+      Validations to be executed before the adoption process.
