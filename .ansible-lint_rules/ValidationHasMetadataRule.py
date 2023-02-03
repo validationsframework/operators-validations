@@ -54,13 +54,13 @@ class ValidationHasMetadataRule(AnsibleLintRule):
     how_to_add_classification = {
         'groups': (
             "To add a new validation group, please add it in the groups.yaml "
-            "file at the root of the tripleo-validations project."
+            "file at the root of the operators-validations project."
         )
     }
 
     def get_classifications(self, classification='groups'):
         """Returns a list classification names
-        defined for tripleo-validations in the '{classification}.yaml' file
+        defined for operators-validations in the '{classification}.yaml' file
         located in the base repo directory.
         """
         file_path = os.path.abspath(classification + '.yaml')
@@ -123,7 +123,7 @@ class ValidationHasMetadataRule(AnsibleLintRule):
 
         if file['type'] == 'playbook':
             if path.startswith("playbooks/") \
-               or "tripleo-validations/playbooks/" in path:
+               or "operators-validations/playbooks/" in path:
 
                 # *hosts* line check
                 hosts = data.get('hosts', None)
