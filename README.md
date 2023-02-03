@@ -1,3 +1,3 @@
-# Ansible Collection - validations.operators_validations
+# Ansible Collection - validationsframework.operators_validations
 
 Documentation for the collection.

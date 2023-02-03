@@ -12,4 +12,4 @@
       products:
         - kubernetes
   roles:
-    - validations.operators_validations.check_pods
+    - validationsframework.operators_validations.check_pods
