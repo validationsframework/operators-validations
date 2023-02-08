@@ -3,7 +3,7 @@ check_pods
 
 Verify that pods are in requested state. By default "Running",
 but it is possible to override the state variable.
- 
+
 Requirements
 ------------
 
@@ -13,9 +13,7 @@ Role Variables
 --------------
 
 Variable `desired_state` is set to "Running" by default and can be overriden
-when the role is called. Variable `metadata` is a dictionary 
-containing machine readable information about the role and isn't used during
-runtime.
+when the role is called.
 
 Dependencies
 ------------
