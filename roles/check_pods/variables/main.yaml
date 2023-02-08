@@ -1,6 +1,0 @@
----
-metadata:
-  name: Check pods
-  description: |
-    Verify that pods are in requested state. By default "Running",
-    however overrides are possible.
