@@ -1,0 +1,16 @@
+---
+- hosts: localhost
+  vars:
+    metadata:
+      name: Operator deployed
+      description: |
+        Check that operator is deployed
+      groups:
+        - pre-adoption
+      categories:
+        - pods
+        - operator
+      products:
+        - kubernetes
+  roles:
+    - validationsframework.operators_validations.check_operators_deployed
