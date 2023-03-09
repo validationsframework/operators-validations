@@ -1,0 +1,30 @@
+---
+name: publishing
+
+on:  # yamllint disable-line rule:truthy
+  push:
+    tags: ['*']
+
+jobs:
+  release:
+    runs_on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install build reqs
+        run: python -m pip install ansible-base
+
+      - name: Build package for github release
+        run: ansible-galaxy collection build
+
+      - name: Upload release artifacts to github
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: validationsframework-operators_validations*.tar.gz
+          generate_release_notes: true
+
+      - name: Ansible Publish
+        uses: ansible/ansible-publish-action@v1.0.0
+        with:
+          api_key: ${{ secrets.ANSIBLE_GALAXY_API_KEY }}
